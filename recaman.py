@@ -10,13 +10,20 @@ for k in range(seqLen):
          finalSeq.append(currentNum)
         else:
             currentNum = currentNum + k
-            finalSeq.append(currentNum)
+            if currentNum not in nums:
+                nums.append(currentNum)
+                finalSeq.append(currentNum)
+            else:
+                finalSeq.append(currentNum)
     else:
         currentNum = currentNum + k
-        finalSeq.append(currentNum)
         if currentNum not in nums:
             nums.append(currentNum)
+            finalSeq.append(currentNum)
+        else:
+            finalSeq.append(currentNum)
 print(finalSeq)
+print(nums)
 
     
 
